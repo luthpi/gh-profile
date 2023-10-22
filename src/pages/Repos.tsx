@@ -5,8 +5,8 @@ import profilePng from "../assets/profile.png";
 
 const baseUrl: string = "https://api.github.com/users/"
 let token: string
-if(process.env.GITHUB_TOKEN) {
-  token = process.env.GITHUB_TOKEN
+if(import.meta.env.GITHUB_TOKEN) {
+  token = import.meta.env.GITHUB_TOKEN
 }
 
 const Repos = (props: object) => {
@@ -15,9 +15,6 @@ const Repos = (props: object) => {
     id: number,
     name: string,
     owner: object,
-    /*  login: luthpai,
-      avatar_url: https://avatars.githubusercontent.com/u/105446118?v=4,
-      html_url: https://github.com/luthpai, */
     html_url: string,
     description: string | null,
     fork: boolean,
@@ -28,10 +25,7 @@ const Repos = (props: object) => {
     forks_count: number,
     open_issues_count: number,
     license: object,
-     // name: MIT License,
     topics: [],
-    //  react,
-    //  tailwindcss
     visibility: string,
     forks: number,
   }
@@ -67,13 +61,9 @@ const Repos = (props: object) => {
       
     }, []);
   
-  repos.map(item, () => {
-    const pushedDate = distanceInWords(parse(item.pushed_at), new Date());
-  })
-  
   return (
     <div>
-      Hi
+      <h1>{usn}'s Repositories</h1>
     </div>
   );
 };

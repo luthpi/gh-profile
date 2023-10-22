@@ -14,8 +14,8 @@ export const L = (props: object) => {
 
 const baseUrl: string = "https://api.github.com/users/"
 let token: string
-if(process.env.GITHUB_TOKEN) {
-  token = process.env.GITHUB_TOKEN
+if(import.meta.env.GITHUB_TOKEN) {
+  token = import.meta.env.GITHUB_TOKEN
 }
 
 const Profile = (props: object) => {
