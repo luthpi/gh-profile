@@ -1,0 +1,23 @@
+#preload {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 100%;
+  background: #303030;
+  position: fixed;
+  z-index: 9999;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#smile {
+  transition: 0.3s;
+  filter: invert();
+}
