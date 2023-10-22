@@ -19,7 +19,7 @@ https://luthpai-gh.vercel.app/stats/?user=john
 
 This app is made with React js, and runs on top of Node js, it means you need to install Node js first, you also need to install yarn.
 
-```bash
+```
 // enable yarn
 $ corepack enable
 // for unix based:
@@ -30,7 +30,7 @@ if none of them work :
 
 `$ npm i -g yarn`
 
-```bash
+```
 // clone this project
 $ git clone https://github.com/luthpai/gh-profile && cd gh-profile
 
@@ -42,6 +42,11 @@ $ yarn dev
 ```
 
 open `localhost:1234` on your browser.
+
+And then, change every usn props on Route elements on App.tsx
+```jsx
+<Route path="/" element={<Profile usn="<change this>" />} />
+```
 
 ## About app
 
